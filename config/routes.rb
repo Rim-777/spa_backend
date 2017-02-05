@@ -5,7 +5,5 @@ Rails.application.routes.draw do
         resources :posts
       end
     end
-
-
   end
 end
