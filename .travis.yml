@@ -1,7 +1,9 @@
 language: ruby
-sudo: false
+sudo: required
 rvm:
   - 2.3.3
 
-#before_script:
-#  - psql -c "CREATE USER timo WITH PASSWORD 'rootm';" -U postgres
+script:
+  - "bundle exec rake neo4j:install['community-2.3.0'] neo4j:start default --trace"
+  - bin/rake db:migrate RAILS_ENV=test
+  - bin/rake
