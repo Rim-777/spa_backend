@@ -3,12 +3,12 @@ class Api::V1::PostsController < Api::V1::BaseController
 
   def index
     @posts = Post.all
-    render json: @posts.to_json
+    render json: @posts
   end
 
   def create
     if @post = Post.create(post_params)
-      render json: @post.to_json, status: :ok
+      render json: @post, status: :ok
     else
       render json: @post.errors.full_messages.join(', '), status: :bad_request
     end
@@ -16,7 +16,7 @@ class Api::V1::PostsController < Api::V1::BaseController
 
   def update
     if @post.update(post_params)
-      render json: @post.to_json, status: :ok
+      render json: @post, status: :ok
     else
       render json: @post.errors.full_messages.join(', '), status: :bad_request
     end
