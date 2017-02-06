@@ -1,4 +1,5 @@
-<img src='https://travis-ci.org/Rim-777/spa_backend.svg?branch=master'>
+[![Build Status](your travis url for the repo here.png)](your travis url for the repo here)
+=for html <a href="https://travis-ci.org/Rim-777/spa_backend"><img src="https://travis-ci.org/Rim-777/spa_backend.svg?branch=master"></a>
 
 == README
 
