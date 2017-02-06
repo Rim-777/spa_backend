@@ -3,5 +3,5 @@ sudo: false
 rvm:
   - 2.3.3
 
-before_script:
-  - psql -c "CREATE USER timo WITH PASSWORD 'rootm';" -U postgres
+#before_script:
+#  - psql -c "CREATE USER timo WITH PASSWORD 'rootm';" -U postgres
