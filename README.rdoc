@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Rim-777/spa_backend.png)](https://travis-ci.org/Rim-777/spa_backend)
+[![Build Status](https://travis-ci.org/Rim-777/spa_backend.svg?branch=master)](https://travis-ci.org/Rim-777/spa_backend)
 
 
 == README
