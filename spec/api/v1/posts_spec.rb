@@ -1,6 +1,7 @@
 require_relative '../api_helper'
 
 describe 'posts API' do
+
   describe 'GET /posts/index' do
     let(:request) { get "/api/posts", format: :json }
     let!(:posts) { create_list(:post, 2) }
@@ -13,6 +14,10 @@ describe 'posts API' do
 
     it 'return list of posts' do
       expect(response.body).to have_json_size(2).at_path('/')
+    end
+
+    it 'does not change a post count' do
+      expect { request }.to_not change(Post, :count)
     end
 
     (0..1).each do |index|
@@ -60,7 +65,7 @@ describe 'posts API' do
       expect(response).to be_success
     end
 
-    it 'creates a new post' do
+    it 'change post count in db' do
       expect { request }.to change(Post, :count).by(1)
     end
 
@@ -89,11 +94,11 @@ describe 'posts API' do
       expect(response).to be_success
     end
 
-    it 'does not create a new post' do
+    it 'does not change a post count' do
       expect { request }.to_not change(Post, :count)
     end
 
-    it "created post contains correct attributes" do
+    it "updated post contains correct attributes" do
       request
       new_attributes.each do |key, value|
         expect(response.body).to be_json_eql(value.to_json).at_path(key.to_s)

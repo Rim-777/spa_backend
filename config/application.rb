@@ -15,7 +15,9 @@ module SpaBackend
 
         resource '*',
                  :headers => :any,
+
                  :methods => [:get, :post, :delete, :put, :patch],
+
                  :max_age => 0
       end
     end

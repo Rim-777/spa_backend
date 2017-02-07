@@ -1,7 +1,8 @@
 require 'rails_helper'
 
 RSpec.configure do |config|
-  # config.use_transactional_fixtures = false
+
+  config.use_transactional_fixtures = false
   #
   # config.before(:each) do
   #   DatabaseCleaner.clean
@@ -44,4 +45,5 @@ RSpec.configure do |config|
   config.after(:each) do
     DatabaseCleaner.clean
   end
+
 end
