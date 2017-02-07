@@ -24,3 +24,10 @@ group :development do
   gem 'spring'
 end
 
+group :test do
+  gem 'shoulda-matchers'
+  gem 'database_cleaner'
+  gem 'json_spec'
+  gem "json_matchers"
+end
+
