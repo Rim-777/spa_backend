@@ -36,5 +36,19 @@ describe 'posts API' do
     it 'creates a new post for user' do
       expect { request }.to change(Post, :count).by(1)
     end
+
+    it "created post contains correct attributes" do
+      request
+      attributes_for(:post).each do |key, value|
+        expect(response.body).to be_json_eql(value.to_json).at_path(key.to_s)
+      end
+    end
+
+    %w(id title body username created_at updated_at).each do |attr|
+      it "created question contains #{attr}" do
+        request
+        expect(response.body).to be_json_eql(Post.first.send(attr.to_sym).to_json).at_path("#{attr}")
+      end
+    end
   end
 end
