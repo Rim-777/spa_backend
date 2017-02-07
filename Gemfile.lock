@@ -95,6 +95,7 @@ GEM
       mini_portile2 (~> 2.1.0)
     pg (0.19.0)
     rack (1.6.5)
+    rack-cors (0.4.1)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.5.1)
@@ -195,6 +196,7 @@ DEPENDENCIES
   json_matchers
   json_spec
   pg (~> 0.15)
+  rack-cors
   rails (= 4.2.5.1)
   rspec-rails
   sass-rails (~> 5.0)
