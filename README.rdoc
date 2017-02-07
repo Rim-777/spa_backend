@@ -1,4 +1,4 @@
 
-[![Build Status](https://travis-ci.org/Rim-777/spa_backend.png?branch=master)](https://travis-ci.org/Rim-777/spa_backend)
+{<img src="https://travis-ci.org/Rim-777/spa_backend.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/Rim-777/spa_backend]
 
 
